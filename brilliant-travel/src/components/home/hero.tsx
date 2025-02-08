@@ -1,0 +1,54 @@
+import Image from "next/image";
+import HeroImage from "@/assets/images/hero_background.png";
+import Link from "next/link";
+import Header from "../layout/header";
+
+export default function Hero() {
+  return (
+    <section className="relative">
+      <Image src={HeroImage} alt="Hero image" className=""/>
+
+      <div className="absolute left-0 bottom-0 w-full h-[133] bg-gradient z-50"></div>
+
+      <div className="absolute left-0 top-0 w-full flex flex-col gap-2">
+        <Header />
+
+        <div className="w-3/5 pt-28 pl-24 flex flex-col gap-6">
+          <h1 className="text-7xl font-semibold">
+            Discover Azerbaijan, Unforgettable Journey!
+          </h1>
+
+          <div className="flex flex-col gap-6">
+            <div className="text-hero text-lg">
+              <div>
+                Explore Azerbaijan history, stunning landscapes, and vibrant
+                culture. From Baku’s
+              </div>
+
+              <div>
+                charm to the Caucasus Mountains, we ensure a seamless and
+                unforgettable journey!
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4">
+              <Link
+                href="/destination"
+                className="text-white bg-black px-6 py-2 rounded-full text-xl"
+              >
+                Book a trip
+              </Link>
+
+              <Link
+                href="/destination"
+                className="bg-white/[0.3] px-6 py-2 rounded-full text-xl border border-border"
+              >
+                Learn more
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

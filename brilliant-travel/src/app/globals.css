@@ -7,6 +7,8 @@
   --foreground: #171717;
   --navigation-foreground: rgba(30, 30, 30, 0.7);
   --navigation-border: rgba(143, 143, 143, 1);
+  --hero-foreground: rgba(120, 120, 120, 0.6);
+  --hero-gradient: linear-gradient(to bottom, transparent, white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +17,8 @@
     --foreground: #171717;
     --navigation-foreground: rgba(30, 30, 30, 0.7);
     --navigation-border: rgba(143, 143, 143, 1);
+    --hero-foreground: rgba(120, 120, 120, 0.6);
+    --hero-gradient: linear-gradient(to bottom, transparent, white);
   }
 }
 

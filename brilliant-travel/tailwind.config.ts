@@ -13,7 +13,11 @@ export default {
         foreground: "var(--foreground)",
         navigation: "var(--navigation-foreground)",
         border: "var(--navigation-border)",
+        hero: "var(--hero-foreground)",
       },
+      backgroundImage: {
+        gradient: "var(--hero-gradient)",
+      }
     },
   },
   plugins: [],
