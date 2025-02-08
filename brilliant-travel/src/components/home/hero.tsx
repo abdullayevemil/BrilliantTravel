@@ -5,7 +5,7 @@ import Header from "../layout/header";
 
 export default function Hero() {
   return (
-    <section className="relative">
+    <div className="relative">
       <Image src={HeroImage} alt="Hero image" className=""/>
 
       <div className="absolute left-0 bottom-0 w-full h-[133] bg-gradient z-50"></div>
@@ -49,6 +49,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
