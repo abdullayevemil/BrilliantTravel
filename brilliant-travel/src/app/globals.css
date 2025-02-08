@@ -5,12 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --navigation-foreground: rgba(30, 30, 30, 0.7);
+  --navigation-border: rgba(143, 143, 143, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
+    --navigation-foreground: rgba(30, 30, 30, 0.7);
+    --navigation-border: rgba(143, 143, 143, 1);
   }
 }
 

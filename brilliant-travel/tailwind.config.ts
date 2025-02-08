@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navigation: "var(--navigation-foreground)",
+        border: "var(--navigation-border)",
       },
     },
   },
