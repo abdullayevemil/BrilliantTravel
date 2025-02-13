@@ -29,7 +29,7 @@ export default function Hero() {
     <div className="relative">
       <Image src={HeroImage} alt="Hero image" className="" />
 
-      <div className="absolute left-0 bottom-0 w-full h-[133] bg-gradient z-50 flex justify-center items-center">
+      <div className="absolute left-0 bottom-0 w-full h-[8.3125rem] bg-gradient z-50 flex justify-center items-center">
         <div className="py-2 px-3 rounded-full flex flex-row gap-2 border border-border">
           <AnimationLottie />
 
