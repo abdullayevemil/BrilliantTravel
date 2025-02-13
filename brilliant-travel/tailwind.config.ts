@@ -14,10 +14,11 @@ export default {
         navigation: "var(--navigation-foreground)",
         border: "var(--navigation-border)",
         hero: "var(--hero-foreground)",
+        primary: "var(--primary-background)",
       },
       backgroundImage: {
         gradient: "var(--hero-gradient)",
-      }
+      },
     },
   },
   plugins: [],
