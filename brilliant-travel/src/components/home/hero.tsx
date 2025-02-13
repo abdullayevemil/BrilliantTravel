@@ -26,7 +26,7 @@ const AnimationLottie = () => {
 
 export default function Hero() {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Image src={HeroImage} alt="Hero image" className="w-full" />
 
       <div className="absolute left-0 bottom-0 w-full h-[8.3125rem] bg-gradient z-50 flex justify-center items-center">
