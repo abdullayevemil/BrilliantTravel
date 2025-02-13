@@ -1,14 +1,41 @@
+"use client";
+
 import Image from "next/image";
 import HeroImage from "@/assets/images/hero_background.png";
+import animationData from "@/assets/icons/mouse.json";
 import Link from "next/link";
 import Header from "../layout/header";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
+const AnimationLottie = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+  };
+
+  return (
+    <Lottie
+      className="flex justify-center items-center w-6 h-6 text-navigation"
+      {...defaultOptions}
+    />
+  );
+};
 
 export default function Hero() {
   return (
     <div className="relative">
-      <Image src={HeroImage} alt="Hero image" className=""/>
+      <Image src={HeroImage} alt="Hero image" className="" />
 
-      <div className="absolute left-0 bottom-0 w-full h-[133] bg-gradient z-50"></div>
+      <div className="absolute left-0 bottom-0 w-full h-[133] bg-gradient z-50 flex justify-center items-center">
+        <div className="py-2 px-3 rounded-full flex flex-row gap-2 border border-border">
+          <AnimationLottie />
+
+          <span className="text-navigation">Scroll down</span>
+        </div>
+      </div>
 
       <div className="absolute left-0 top-0 w-full flex flex-col gap-2">
         <Header />
