@@ -1,5 +1,7 @@
 import SuitcaseIcon from "@/assets/icons/personalized-honeymoons.gif";
 import Image from "next/image";
+import TourGuide from "@/assets/icons/tour-guide.gif";
+import Wallet from "@/assets/icons/wallet.gif";
 
 export default function Benefits() {
   return (
@@ -22,27 +24,27 @@ export default function Benefits() {
 
         <div className="border border-border rounded-2xl w-1/3 p-6 flex flex-col gap-3">
           <Image
-            src={SuitcaseIcon}
-            alt="Suitcase icon"
+            src={TourGuide}
+            alt="Tour guide icon"
             width={72}
             height={72}
           />
 
           <h3 className="text-[2rem] font-semibold">
-            Seamless Travel Experience
+            Expert Local Guides
           </h3>
         </div>
 
         <div className="border border-border rounded-2xl w-1/3 p-6 flex flex-col gap-3">
           <Image
-            src={SuitcaseIcon}
-            alt="Suitcase icon"
+            src={Wallet}
+            alt="Wallet icon"
             width={72}
             height={72}
           />
 
           <h3 className="text-[2rem] font-semibold">
-            Seamless Travel Experience
+            Secure & Easy Payment
           </h3>
         </div>
       </div>
