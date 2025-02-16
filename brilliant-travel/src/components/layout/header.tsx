@@ -34,7 +34,7 @@ export default function Header() {
         href="/contact"
         className="bg-white/[0.3] px-4 py-2 border-border border rounded-full text-base"
       >
-        Contact us
+        Contact Us
       </Link>
     </header>
   );
