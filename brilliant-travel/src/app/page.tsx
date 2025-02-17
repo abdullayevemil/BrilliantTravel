@@ -35,7 +35,7 @@ export default function Home() {
           </div>
 
           <Image
-            className="absolute bottom-0 right-0 h-[26.5rem]"
+            className="absolute bottom-0 right-0 h-[26.5rem] object-cover"
             src={QizQalasi}
             alt="qiz qalasi"
           />
