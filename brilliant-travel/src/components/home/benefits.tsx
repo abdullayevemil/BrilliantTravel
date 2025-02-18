@@ -5,7 +5,7 @@ import Wallet from "@/assets/icons/wallet.gif";
 
 export default function Benefits() {
   return (
-    <div>
+    <div className="flex flex-col gap-7">
       <h2 className="font-semibold text-[2.625rem]">Our benefits</h2>
 
       <div className="flex flex-row gap-6">
