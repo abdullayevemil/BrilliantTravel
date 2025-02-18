@@ -1,3 +1,4 @@
+import Assistance from "@/components/home/assistance";
 import Benefits from "@/components/home/benefits";
 import Hero from "@/components/home/hero";
 import Moments from "@/components/home/moments";
@@ -28,8 +29,12 @@ export default function Home() {
         <Moments />
       </section>
 
-      <section className="w-full flex flex-col gap-7">
+      <section className="w-full flex flex-col gap-7 mb-16">
         <Reviews />
+      </section>
+
+      <section className="w-full flex flex-col gap-7 px-24">
+        <Assistance />
       </section>
     </main>
   );
