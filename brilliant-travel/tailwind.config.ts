@@ -10,6 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        secondaryFg: "var(--secondary-fg)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         navigation: "var(--navigation-foreground)",
