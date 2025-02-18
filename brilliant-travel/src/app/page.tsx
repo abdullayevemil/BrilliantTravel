@@ -1,5 +1,6 @@
 import Assistance from "@/components/home/assistance";
 import Benefits from "@/components/home/benefits";
+import FAQ from "@/components/home/faq";
 import Hero from "@/components/home/hero";
 import Moments from "@/components/home/moments";
 import Reviews from "@/components/home/reviews";
@@ -35,6 +36,10 @@ export default function Home() {
 
       <section className="w-full flex flex-col gap-7 px-24">
         <Assistance />
+      </section>
+
+      <section className="px-24 w-full flex flex-col gap-7">
+        <FAQ />
       </section>
     </main>
   );
