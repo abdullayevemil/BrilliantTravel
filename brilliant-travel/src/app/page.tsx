@@ -1,6 +1,7 @@
 import Benefits from "@/components/home/benefits";
 import Hero from "@/components/home/hero";
 import Moments from "@/components/home/moments";
+import Reviews from "@/components/home/reviews";
 import Tours from "@/components/home/tours";
 import WhoWeAre from "@/components/home/who-we-are";
 
@@ -25,6 +26,10 @@ export default function Home() {
 
       <section className="w-full flex flex-col gap-7">
         <Moments />
+      </section>
+
+      <section className="w-full flex flex-col gap-7">
+        <Reviews />
       </section>
     </main>
   );
