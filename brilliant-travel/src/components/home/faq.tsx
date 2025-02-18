@@ -13,7 +13,7 @@ export default function FAQ() {
           <h2 className="font-semibold text-[2.625rem]">FAQ</h2>
 
           <p className="text-lg w-[540px]">
-            Here, you'll find answers to the most common questions about our
+            Here, you&apos;ll find answers to the most common questions about our
             travel services, including booking, cancellations, destinations, and
             travel requirements.
           </p>

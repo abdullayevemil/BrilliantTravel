@@ -12,7 +12,7 @@ export default function Assistance() {
 
           <p className="w-1/2">
             Not sure which destination suits you best? Let our travel experts
-            guide you! Whether you're looking for an adventurous getaway or a
+            guide you! Whether you&apos;re looking for an adventurous getaway or a
             cultural exploration, we’ll help you find the perfect experience.
           </p>
 
