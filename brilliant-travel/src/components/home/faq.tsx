@@ -7,7 +7,7 @@ import {
 
 export default function FAQ() {
   return (
-    <div className="flex flex-row w-full justify-between">
+    <div className="flex flex-row w-full justify-between py-6">
       <div>
         <div className="flex flex-col 2">
           <h2 className="font-semibold text-[2.625rem]">FAQ</h2>

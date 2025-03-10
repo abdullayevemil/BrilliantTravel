@@ -4,20 +4,24 @@
 
 :root {
   --navigation-foreground: rgba(30, 30, 30, 0.7);
+  --footer-foreground: rgba(30, 30, 30, 0.7);
   --navigation-border: rgba(143, 143, 143, 1);
   --hero-foreground: rgba(120, 120, 120, 0.6);
   --hero-gradient: linear-gradient(to bottom, transparent, white);
   --primary-bg: #eeddcc;
   --secondary-fg: #8f8f8f;
+  --footer-background: #f5f5f5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --navigation-foreground: rgba(30, 30, 30, 0.7);
+    --footer-foreground: rgba(30, 30, 30, 0.7);
     --navigation-border: rgba(143, 143, 143, 1);
     --hero-foreground: rgba(120, 120, 120, 0.6);
     --hero-gradient: linear-gradient(to bottom, transparent, white);
     --secondary-fg: #8f8f8f;
+    --footer-background: #f5f5f5;
     --primary-bg: #eeddcc;
   }
 }
