@@ -10,6 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        order: "var(--order-border)",
+        button: "var(--button-background)",
         footer: "var(--footer-foreground)",
         footerBg: "var(--footer-background)",
         secondaryFg: "var(--secondary-fg)",
@@ -59,6 +61,7 @@ export default {
       },
       backgroundImage: {
         gradient: "var(--hero-gradient)",
+        tourGradient: "var(--tour-gradient)",
       },
       borderRadius: {
         lg: "var(--radius)",
