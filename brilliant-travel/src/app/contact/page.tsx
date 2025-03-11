@@ -70,12 +70,12 @@ export default function Contact() {
         </section>
 
         <section className="flex flex-row w-full justify-between">
-          <div className="flex flex-col gap-7">
-            <h2 className="font-semibold text-[2.625rem]">
-              Get in touch
-            </h2>
+          <div className="flex flex-col gap-7 w-1/2">
+            <h2 className="font-semibold text-[2.625rem]">Get in touch</h2>
 
-            <ContactForm />
+            <div className="w-4/5">
+              <ContactForm />
+            </div>
           </div>
 
           <div className="w-1/2 relative rounded-2xl">
