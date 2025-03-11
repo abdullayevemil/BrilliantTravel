@@ -24,7 +24,7 @@ export default function Header() {
 
           <li className="px-2 py-1.5">
             <Link href="/about" className="text-navigation text-base">
-              About
+              About us
             </Link>
           </li>
         </ul>
