@@ -29,8 +29,6 @@ export default async function TourPage({
 
   const tour = tours.find((tour) => tour.id === title);
 
-  const count = 1;
-
   if (tour) {
     return (
       <div>
