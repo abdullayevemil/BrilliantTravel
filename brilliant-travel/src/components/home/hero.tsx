@@ -60,14 +60,14 @@ export default function Hero() {
 
             <div className="flex flex-row gap-4">
               <Link
-                href="/destination"
+                href="/destinations"
                 className="text-white bg-black px-6 py-2 rounded-full text-xl"
               >
                 Book a trip
               </Link>
 
               <Link
-                href="/destination"
+                href="/about"
                 className="bg-white/[0.3] px-6 py-2 rounded-full text-xl border border-border"
               >
                 Learn more

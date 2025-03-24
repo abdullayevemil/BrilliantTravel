@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DirectionSign from "@/assets/images/direction_sign.png";
+import Link from "next/link";
 
 export default function Assistance() {
   return (
@@ -16,9 +17,9 @@ export default function Assistance() {
             cultural exploration, we’ll help you find the perfect experience.
           </p>
 
-          <button className="w-fit px-6 py-3 bg-black text-white rounded-full border border-border">
+          <Link href="/contact" className="w-fit px-6 py-3 bg-black text-white rounded-full border border-border">
             Contact us
-          </button>
+          </Link>
         </div>
       </div>
 

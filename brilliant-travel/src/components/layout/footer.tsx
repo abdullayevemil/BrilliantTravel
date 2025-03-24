@@ -25,19 +25,19 @@ export default function Footer() {
             <div className="font-bold text-[1.75rem]">Tours</div>
 
             <div className="flex flex-col gap-2">
-              <Link href="/" className="text-lg text-navigation">
+              <Link href="/destinations/gobustan-absheron" className="text-lg text-navigation">
                 Gobustan & Absheron trip
               </Link>
 
-              <Link href="/" className="text-lg text-navigation">
+              <Link href="/destinations/baku-city" className="text-lg text-navigation">
                 Baku city tour
               </Link>
 
-              <Link href="/" className="text-lg text-navigation">
+              <Link href="/destinations/guba-shahdag" className="text-lg text-navigation">
                 Guba & Shahdag tour
               </Link>
 
-              <Link href="/" className="text-lg text-navigation">
+              <Link href="/destinations/gabala-shamakhi" className="text-lg text-navigation">
                 Gabala & Shamakhi tour
               </Link>
             </div>
@@ -48,19 +48,19 @@ export default function Footer() {
           <div className="font-bold text-[1.75rem]">Company</div>
 
           <div className="flex flex-col gap-2">
-            <Link href="/" className="text-lg text-navigation">
+            <Link href="/destinations" className="text-lg text-navigation">
               Destinations
             </Link>
 
-            <Link href="/" className="text-lg text-navigation">
+            <Link href="/destinations" className="text-lg text-navigation">
               Gallery
             </Link>
 
-            <Link href="/" className="text-lg text-navigation">
+            <Link href="/about" className="text-lg text-navigation">
               About us
             </Link>
 
-            <Link href="/" className="text-lg text-navigation">
+            <Link href="/contact" className="text-lg text-navigation">
               Contact us
             </Link>
           </div>
@@ -70,17 +70,18 @@ export default function Footer() {
           <div className="font-bold text-[1.75rem]">Contact us</div>
 
           <div className="flex flex-col gap-2">
-            <Link
-              href="/"
+            <div
               className="text-lg text-navigation flex flex-row gap-4 items-center"
             >
               <MapPin />
 
               <p>Tbilisi avenue Baku</p>
-            </Link>
+            </div>
 
             <Link
-              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="tel:+994 50 256 15 19"
               className="text-lg text-navigation flex flex-row gap-4 items-center"
             >
               <Phone />
@@ -89,12 +90,14 @@ export default function Footer() {
             </Link>
 
             <Link
-              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:info@brilliant.travel.az"
               className="text-lg text-navigation flex flex-row gap-4 items-center"
             >
               <Mail />
 
-              <span>info2brilliant.travel.az</span>
+              <span>info@brilliant.travel.az</span>
             </Link>
 
             <div className="flex flex-row gap-4">

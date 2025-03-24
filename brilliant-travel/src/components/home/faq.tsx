@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 export default function FAQ() {
   return (
@@ -13,9 +14,9 @@ export default function FAQ() {
           <h2 className="font-semibold text-[2.625rem]">FAQ</h2>
 
           <p className="text-lg w-[540px]">
-            Here, you&apos;ll find answers to the most common questions about our
-            travel services, including booking, cancellations, destinations, and
-            travel requirements.
+            Here, you&apos;ll find answers to the most common questions about
+            our travel services, including booking, cancellations, destinations,
+            and travel requirements.
           </p>
         </div>
       </div>
@@ -28,11 +29,27 @@ export default function FAQ() {
             </AccordionTrigger>
 
             <AccordionContent className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              laoreet justo, vel scelerisque erat. Donec in enim dignissim,
-              luctus nunc et, bibendum dui. Pellentesque quis elementum lacus.
-              Fusce sollicitudin feugiat posuere. Nullam posuere purus et ante
-              eleifend elementum.
+              <ol className="list-decimal">
+                <li>Discover Azerbaijan with high comfort</li>{" "}
+                <li>Hotels, Tours and free consultation service</li>{" "}
+                <li>Professional guide and comfortable transportation</li>
+              </ol>{" "}
+              <ol>
+                <li className="list-decimal">
+                  🌿 Guba Shahdag Candy Canes Tour ❄️ Stunning mountain views
+                  and thrilling activities!
+                </li>{" "}
+                <li>
+                  🔥 Gobustan - Absheron: Mud Volcanoes & Fire Temple An
+                  excellent opportunity to discover ancient Azerbaijani history,
+                  culture and traditions
+                </li>{" "}
+                <li>
+                  Gabala-Shamakhi-Tufandag -Nohur lake - Waterfall tour 🌄
+                  Azerbaijan’s Best Nature Tour 🌿 Experience the breathtaking
+                  landscapes and stunning natural wonders!
+                </li>
+              </ol>
             </AccordionContent>
           </AccordionItem>
 
@@ -42,11 +59,28 @@ export default function FAQ() {
             </AccordionTrigger>
 
             <AccordionContent className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              laoreet justo, vel scelerisque erat. Donec in enim dignissim,
-              luctus nunc et, bibendum dui. Pellentesque quis elementum lacus.
-              Fusce sollicitudin feugiat posuere. Nullam posuere purus et ante
-              eleifend elementum.
+              Contact with us with{" "}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:info@brilliant.travel.az"
+                className="underline"
+              >
+                mail
+              </Link>{" "}
+              or{" "}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="tel:+994 50 256 15 19"
+                className="underline"
+              >
+                whatsapp
+              </Link>
+              . Or just order from{" "}
+              <Link href="/destinations" className="underline">
+                tours
+              </Link>
             </AccordionContent>
           </AccordionItem>
 
@@ -56,25 +90,8 @@ export default function FAQ() {
             </AccordionTrigger>
 
             <AccordionContent className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              laoreet justo, vel scelerisque erat. Donec in enim dignissim,
-              luctus nunc et, bibendum dui. Pellentesque quis elementum lacus.
-              Fusce sollicitudin feugiat posuere. Nullam posuere purus et ante
-              eleifend elementum.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem className="text-lg" value="item-4">
-            <AccordionTrigger className="text-lg">
-              Can I book flights, hotels, and tours separately?
-            </AccordionTrigger>
-
-            <AccordionContent className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              laoreet justo, vel scelerisque erat. Donec in enim dignissim,
-              luctus nunc et, bibendum dui. Pellentesque quis elementum lacus.
-              Fusce sollicitudin feugiat posuere. Nullam posuere purus et ante
-              eleifend elementum.
+              Yes we offer customized travel packages if currently we have any
+              tour going with your demands. Try your luck
             </AccordionContent>
           </AccordionItem>
 
@@ -84,11 +101,17 @@ export default function FAQ() {
             </AccordionTrigger>
 
             <AccordionContent className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              laoreet justo, vel scelerisque erat. Donec in enim dignissim,
-              luctus nunc et, bibendum dui. Pellentesque quis elementum lacus.
-              Fusce sollicitudin feugiat posuere. Nullam posuere purus et ante
-              eleifend elementum.
+              You can pay with{" "}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                href="https://www.bokun.io"
+              >
+                Bokun
+              </Link>{" "}
+              (safe and reliable) after choosing your tour. In future we are
+              planning to add card options too.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

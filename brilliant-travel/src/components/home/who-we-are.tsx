@@ -1,5 +1,6 @@
 import Image from "next/image";
 import QizQalasi from "@/assets/images/qiz-qalasi copy.png";
+import Link from "next/link";
 
 export default function WhoWeAre() {
   return (
@@ -16,9 +17,9 @@ export default function WhoWeAre() {
             make your next trip brilliant!
           </p>
 
-          <button className="w-fit px-6 py-3 rounded-full border border-border">
+          <Link href="/about" className="w-fit px-6 py-3 rounded-full border border-border">
             Learn more
-          </button>
+          </Link>
         </div>
       </div>
 

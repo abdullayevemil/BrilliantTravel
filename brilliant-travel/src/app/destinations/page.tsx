@@ -20,6 +20,7 @@ import BibiEybat from "@/assets/images/bibi-eybat.png";
 import Link from "next/link";
 import Assistance from "@/components/home/assistance";
 import OtherTours from "@/components/tours/other-tours";
+import { tours } from "@/db/tours";
 
 const headerImages = [
   {
@@ -312,7 +313,7 @@ export default function Destinations() {
                 </div>
 
                 <div className="absolute left-6 top-0 w-[2px] -z-10 h-full border border-dashed"></div>
-                
+
                 <div className="flex flex-row gap-2 py-2 h-full items-center">
                   <div className="font-bold text-2xl flex items-center">
                     <div>{stops[0].name}</div>
@@ -420,7 +421,7 @@ export default function Destinations() {
         </section>
 
         <section className="w-full">
-          <OtherTours />
+          <OtherTours id={tours[0].id} />
         </section>
       </main>
     </div>

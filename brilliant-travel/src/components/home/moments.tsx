@@ -46,7 +46,7 @@ export default function Moments() {
 
         <div className="absolute left-0 bottom-0 w-full h-[8.3125rem] bg-gradient z-50 flex justify-center items-center">
           <Link
-            href="/"
+            href="/destinations"
             className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1"
           >
             <span>Show more</span>

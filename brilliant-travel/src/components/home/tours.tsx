@@ -14,6 +14,7 @@ import MapPinIcon from "@/assets/icons/map-pin.svg";
 import ClockIcon from "@/assets/icons/clock.svg";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { tours } from "@/db/tours";
 
 export default function Tours() {
   return (
@@ -42,14 +43,14 @@ export default function Tours() {
 
         <div className="pl-[5.875rem]">
           <CarouselContent className="py-2">
-            {Array.from({ length: 5 }).map((_, index) => (
+            {tours.map((tour, index) => (
               <CarouselItem key={index} className="lg:basis-1/3">
                 <div className="p-2">
                   <Card className="w-full">
                     <CardContent className="flex flex-col aspect-square items-center justify-center p-0 w-full justify-between">
                       <div className="p-2 w-full">
                         <Image
-                          src="https://s3-alpha-sig.figma.com/img/8438/9387/741a061afdcf089c40a06c37aeef7dfb?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=g6cWFzhNWOoTnsC0KzwyZIxz8ej6xmGu4o7OtFLJnDt4LJWvBx~VOoTIbOPwWGu8hnj2qnhHasdcLQmCEp8Ztky~t5hCsPqoJ5B2uIbxb~scn6wT1IU5EN74T7Gu7bJOA3H9CfgHw3iIuFDCFv5GnmtTKTWkcxxUevoEU53mD7iQ7ITCWq~xG2N-8p5htIPwXyteJnxJgHtmb-qZEwHDpciO0zUCVZrQ1Ntl6m~1RqdqZN9LMs5RnIp-hPBVPNn4mpSgOcfPWbh7Z5g1EWOQPrTH172qRt~GkWbdb7wHbvdHBaGSoBSYG8yKAFPE1jAMLMH~Xs0~UX00NQYtSASbmg__"
+                          src={tour.cover_image}
                           alt="tour image"
                           width={900}
                           height={700}
@@ -60,7 +61,7 @@ export default function Tours() {
                       <div className="p-4 pt-2 flex flex-col justify-between w-full gap-[3rem]">
                         <div className="w-full flex flex-col gap-3">
                           <h3 className="font-bold text-[1.75rem]">
-                            Gobustan & Absheron tour
+                            {tour.title}
                           </h3>
 
                           <div className="flex flex-row gap-3">
@@ -72,7 +73,7 @@ export default function Tours() {
                               />
 
                               <span className="text-secondaryFg font-medium text-base">
-                                7 hours
+                                {tour.time}
                               </span>
                             </div>
 
@@ -88,7 +89,7 @@ export default function Tours() {
                               />
 
                               <span className="text-secondaryFg font-medium text-base">
-                                6 stops
+                                {tour.stops} stops
                               </span>
                             </div>
                           </div>
@@ -97,7 +98,7 @@ export default function Tours() {
                         <div className="w-full flex flex-row justify-between items-center">
                           <div className="flex flex-row gap-2 py-2 h-full">
                             <div className="font-bold text-2xl flex items-center">
-                              <div>60 AZN</div>
+                              <div>{tour.price} AZN</div>
                             </div>
 
                             <div className="py-1">
@@ -110,7 +111,7 @@ export default function Tours() {
                           </div>
 
                           <Link
-                            href="/"
+                            href={`/destinations/${tour.id}`}
                             className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1"
                           >
                             <span>Details</span>
