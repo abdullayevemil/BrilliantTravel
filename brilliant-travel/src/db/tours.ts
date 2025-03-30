@@ -85,7 +85,7 @@ export const tours: Tour[] = [
         description: "Complimentary refreshing water",
       },
     ],
-    price: 60,
+    price: 40,
     time: "7 hours",
     stops: 6,
     cover_image:
@@ -128,7 +128,7 @@ export const tours: Tour[] = [
         description: "Complimentary refreshing water",
       },
     ],
-    price: 45,
+    price: 40,
     time: "8 hours",
     stops: 7,
     cover_image:
@@ -208,7 +208,7 @@ export const tours: Tour[] = [
         description: "Complimentary refreshing water",
       },
     ],
-    price: 59,
+    price: 60,
     time: "16 hours",
     stops: 4,
     cover_image:

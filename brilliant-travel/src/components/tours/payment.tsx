@@ -60,7 +60,7 @@ export default function PaymentForm({ tour }: Props) {
         <div className="w-full flex flex-row justify-between items-center">
           <div className="flex flex-row gap-2 py-2 h-full items-center">
             <div className="font-bold text-2xl flex items-center">
-              <div>{tour.price} AZN</div>
+              <div>{tour.price} $</div>
             </div>
 
             <div className="h-6 flex items-center">
