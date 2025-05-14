@@ -21,6 +21,18 @@ export default function Header() {
               About us
             </Link>
           </li>
+
+          <li className="px-2 py-1.5">
+            <Link href="/terms-of-service" className="text-navigation text-base">
+              Terms of Service
+            </Link>
+          </li>
+
+          <li className="px-2 py-1.5">
+            <Link href="/privacy-policy" className="text-navigation text-base">
+              Privacy Policy
+            </Link>
+          </li>
         </ul>
       </nav>
 
