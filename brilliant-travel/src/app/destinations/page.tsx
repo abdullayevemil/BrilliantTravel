@@ -21,19 +21,39 @@ import Link from "next/link";
 import Assistance from "@/components/home/assistance";
 import OtherTours from "@/components/tours/other-tours";
 import { tours } from "@/db/tours";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import Gallery from "@/components/tours/gallery";
+
+const imageLinks = [
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228848/brilliant%20travel/Qobustan/puy5mtcn8gwwmeczkdes.png",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228848/brilliant%20travel/Qobustan/fnanutkx8i9mkznjuzo5.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228851/brilliant%20travel/Qobustan/r9jlv2x0mdsnznlbsdrs.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228847/brilliant%20travel/Qobustan/cn8bd8dkmb1cvseeye4j.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228846/brilliant%20travel/Qobustan/smcvwysemzgcukrgdjg2.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228846/brilliant%20travel/Qobustan/qoormdrzuxwma8nkcj7d.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228848/brilliant%20travel/Qobustan/bjle7dwsoicyziyus3k3.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228851/brilliant%20travel/Qobustan/ttpfizkjtobkw48ci0am.jpg",
+  "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228851/brilliant%20travel/Qobustan/qpcwhntsvqp0drlevjcn.jpg",
+];
 
 const headerImages = [
   {
-    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1741621858/brilliant%20travel/destinations/gobustan%20absheron/k8a9et0xwmr85kaxkqxt.png",
+    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228848/brilliant%20travel/Qobustan/puy5mtcn8gwwmeczkdes.png",
   },
   {
-    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1741621444/brilliant%20travel/destinations/gobustan%20absheron/gclunk6p4iccx2kunnvy.png",
+    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228848/brilliant%20travel/Qobustan/fnanutkx8i9mkznjuzo5.jpg",
   },
   {
-    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1741621444/brilliant%20travel/destinations/gobustan%20absheron/s3bknpz2rcz4l8fg5snh.png",
+    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228851/brilliant%20travel/Qobustan/r9jlv2x0mdsnznlbsdrs.jpg",
   },
   {
-    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1741621444/brilliant%20travel/destinations/gobustan%20absheron/s3bknpz2rcz4l8fg5snh.png",
+    link: "https://res.cloudinary.com/dzw2udcre/image/upload/v1747228847/brilliant%20travel/Qobustan/cn8bd8dkmb1cvseeye4j.jpg",
   },
 ];
 
@@ -138,9 +158,18 @@ export default function Destinations() {
                 />
 
                 <div className="absolute left-0 top-0 w-full h-full bg-footer rounded-2xl flex items-center justify-center">
-                  <button className="bg-button px-4 py-2 rounded-full">
-                    Show all
-                  </button>
+                  <Dialog>
+                    <DialogTrigger className="bg-button px-4 py-2 rounded-full">
+                      Show all
+                    </DialogTrigger>
+                    <DialogContent className="w-4/5">
+                      <DialogHeader>
+                        <DialogTitle>Photo gallery</DialogTitle>
+
+                        <Gallery links={imageLinks} />
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>

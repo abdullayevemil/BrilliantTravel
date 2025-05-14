@@ -6,11 +6,18 @@ import TourGuide from "@/assets/icons/tour-guide.gif";
 import Wallet from "@/assets/icons/wallet.gif";
 import Water from "@/assets/icons/mineral-water.gif";
 import Bus from "@/assets/icons/bus-journey.gif";
-import BibiEybat from "@/assets/images/bibi-eybat.png";
 import Link from "next/link";
 import Assistance from "@/components/home/assistance";
 import OtherTours from "@/components/tours/other-tours";
 import PaymentForm from "@/components/tours/payment";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import Gallery from "@/components/tours/gallery";
 
 const icons = [TourGuide, Bus, Wallet, Water];
 
@@ -78,9 +85,18 @@ export default async function TourPage({
                   />
 
                   <div className="absolute left-0 top-0 w-full h-full bg-footer rounded-2xl flex items-center justify-center">
-                    <Link href={`/destinations/${tour.id}/modal`} className="bg-button px-4 py-2 rounded-full">
-                      Show all
-                    </Link>
+                    <Dialog>
+                      <DialogTrigger className="bg-button px-4 py-2 rounded-full">
+                        Show all
+                      </DialogTrigger>
+                      <DialogContent className="w-4/5">
+                        <DialogHeader>
+                          <DialogTitle>Photo gallery</DialogTitle>
+
+                          <Gallery links={tour.images} />
+                        </DialogHeader>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </div>
@@ -130,7 +146,7 @@ export default async function TourPage({
           <section className="flex flex-col gap-7 mb-16">
             <h3 className="font-semibold text-4xl">Tour program</h3>
 
-            <div className="flex flex-row justify-between items-end gap-4">
+            <div className="flex flex-row justify-between items-center gap-4">
               <div className="flex flex-col gap-5 relative">
                 <div className="flex flex-row items-center gap-3">
                   <div className="border rounded-full p-[0.625rem] w-12 h-12 flex items-center justify-center bg-white">
@@ -233,11 +249,11 @@ export default async function TourPage({
 
               <div className="relative w-2/5">
                 <Image
-                  src={BibiEybat}
+                  src={tour.tour_program_photo}
                   alt="mosque image"
                   width={900}
                   height={900}
-                  className="w-full object-cover rounded-2xl"
+                  className="w-full h-[32.5rem] object-cover rounded-2xl"
                 />
 
                 <div className="gap-[0.625rem] p-8 w-full h-2/5 absolute bottom-0 left-0 bg-tourGradient rounded-2xl text-white flex flex-col justify-end">
