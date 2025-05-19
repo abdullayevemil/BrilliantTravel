@@ -137,7 +137,7 @@ export default function PrivacyPolicy() {
               Usage Data is collected automatically when using the Service.
               <br></br>
               <br></br>
-              Usage Data may include information such as Your Device's Internet
+              Usage Data may include information such as Your Device&apos;s Internet
               Protocol address (e.g. IP address), browser type, browser version,
               the pages of our Service that You visit, the time and date of Your
               visit, the time spent on those pages, unique device identifiers
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
             </ul>
 
             <p>
-              Cookies can be "Persistent" or "Session" Cookies. Persistent
+              Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent
               Cookies remain after going offline, while Session Cookies are
               deleted when You close Your browser.
             </p>
@@ -325,7 +325,7 @@ export default function PrivacyPolicy() {
               data but cannot guarantee absolute security.
             </p>
 
-            <h2 className="text-2xl font-semibold">Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold">Children&apos;s Privacy</h2>
             <p>
               We do not knowingly collect information from anyone under the age
               of 13. If aware of such data, we take steps to delete it.

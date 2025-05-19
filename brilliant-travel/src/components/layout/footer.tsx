@@ -25,19 +25,31 @@ export default function Footer() {
             <div className="font-bold text-[1.75rem]">Tours</div>
 
             <div className="flex flex-col gap-2">
-              <Link href="/destinations/gobustan-absheron" className="text-lg text-navigation">
+              <Link
+                href="/destinations/gobustan-absheron"
+                className="text-lg text-navigation"
+              >
                 Gobustan & Absheron trip
               </Link>
 
-              <Link href="/destinations/baku-city" className="text-lg text-navigation">
+              <Link
+                href="/destinations/baku-city"
+                className="text-lg text-navigation"
+              >
                 Baku city tour
               </Link>
 
-              <Link href="/destinations/guba-shahdag" className="text-lg text-navigation">
+              <Link
+                href="/destinations/guba-shahdag"
+                className="text-lg text-navigation"
+              >
                 Guba & Shahdag tour
               </Link>
 
-              <Link href="/destinations/gabala-shamakhi" className="text-lg text-navigation">
+              <Link
+                href="/destinations/gabala-shamakhi"
+                className="text-lg text-navigation"
+              >
                 Gabala & Shamakhi tour
               </Link>
             </div>
@@ -63,6 +75,17 @@ export default function Footer() {
             <Link href="/contact" className="text-lg text-navigation">
               Contact us
             </Link>
+            
+            <Link
+              href="/terms-of-service"
+              className="text-navigation text-base"
+            >
+              Terms of Service
+            </Link>
+
+            <Link href="/privacy-policy" className="text-navigation text-base">
+              Privacy Policy
+            </Link>
           </div>
         </div>
 
@@ -70,9 +93,7 @@ export default function Footer() {
           <div className="font-bold text-[1.75rem]">Contact us</div>
 
           <div className="flex flex-col gap-2">
-            <div
-              className="text-lg text-navigation flex flex-row gap-4 items-center"
-            >
+            <div className="text-lg text-navigation flex flex-row gap-4 items-center">
               <MapPin />
 
               <p>Tbilisi avenue Baku</p>
