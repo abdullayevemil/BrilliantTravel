@@ -75,7 +75,7 @@ export default function Footer() {
             <Link href="/contact" className="text-lg text-navigation">
               Contact us
             </Link>
-            
+
             <Link
               href="/terms-of-service"
               className="text-navigation text-base"
@@ -113,12 +113,17 @@ export default function Footer() {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="mailto:info@brilliant.travel.az"
+              href="mailto:qurban.quliyev@brilliant-travel.com"
               className="text-lg text-navigation flex flex-row gap-4 items-center"
             >
               <Mail />
 
-              <span>info@brilliant.travel.az</span>
+              <Link
+                href="mailto:qurban.quliyev@brilliant-travel.com"
+                className="underline"
+              >
+                qurban.quliyev@brilliant-travel.com
+              </Link>
             </Link>
 
             <div className="flex flex-row gap-4">

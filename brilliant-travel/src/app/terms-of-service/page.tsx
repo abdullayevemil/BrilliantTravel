@@ -1,4 +1,5 @@
 import Header from "@/components/layout/header";
+import Link from "next/link";
 
 export default function TermsOfService() {
   return (
@@ -11,7 +12,7 @@ export default function TermsOfService() {
             Terms of Service
           </h1>
           <p className="mb-[15px]">
-            <strong>Effective Date:</strong> [Insert Date]
+            <strong>Effective Date:</strong> 2025.03.01
           </p>
           <p className="mb-[15px]">
             <strong>Business Name:</strong> Brilliant Travel LLC
@@ -165,12 +166,12 @@ export default function TermsOfService() {
           <div className="mt-[30px] bg-[#2C3E50] text-white p-2.5 rounded">
             <p>
               <strong>Email:</strong>
-              <a
+              <Link
                 href="mailto:qurban.quliyev@brilliant-travel.com"
                 className="underline"
               >
                 qurban.quliyev@brilliant-travel.com
-              </a>
+              </Link>
             </p>
             <p>
               <strong>Website:</strong>

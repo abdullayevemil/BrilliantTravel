@@ -63,7 +63,7 @@ export default function FAQ() {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="mailto:info@brilliant.travel.az"
+                href="mailto:qurban.quliyev@brilliant-travel.com"
                 className="underline"
               >
                 mail

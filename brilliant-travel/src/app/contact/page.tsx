@@ -53,7 +53,7 @@ export default function Contact() {
               </h3>
 
               <span className="text-2xl underline">
-                info@brilliant.travel.az
+                qurban.quliyev@brilliant-travel.com
               </span>
             </div>
 

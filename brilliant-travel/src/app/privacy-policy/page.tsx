@@ -1,4 +1,5 @@
 import Header from "@/components/layout/header";
+import Link from "next/link";
 
 export default function PrivacyPolicy() {
   return (
@@ -26,17 +27,7 @@ export default function PrivacyPolicy() {
             <p>
               We use Your Personal data to provide and improve the Service. By
               using the Service, You agree to the collection and use of
-              information in accordance with this Privacy Policy. This Privacy
-              Policy has been created with the help of the{" "}
-              <a
-                href="https://www.termsfeed.com/privacy-policy-generator/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline"
-              >
-                Privacy Policy Generator
-              </a>
-              .
+              information in accordance with this Privacy Policy.
             </p>
 
             <h2 className="text-2xl font-semibold">
@@ -348,7 +339,12 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold">Contact Us</h2>
             <p>
               If you have any questions, you can contact us via email at{" "}
-              <span className="italic">[email&#160;protected]</span>
+              <Link
+                href="mailto:qurban.quliyev@brilliant-travel.com"
+                className="underline"
+              >
+                qurban.quliyev@brilliant-travel.com
+              </Link>
             </p>
           </section>
         </div>
