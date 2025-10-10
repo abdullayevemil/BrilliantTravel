@@ -1,9 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, MinusCircle, PlusCircle, Users } from "lucide-react";
-import { DatePicker } from "./date-picker";
+import {
+  Calendar as CalendarIcon,
+  MinusCircle,
+  PlusCircle,
+  Users,
+} from "lucide-react";
 import { Tour } from "@/types/tour";
+import Link from "next/link";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
+import { format } from "date-fns";
 
 interface Props {
   tour: Tour;
@@ -11,21 +24,42 @@ interface Props {
 
 export default function PaymentForm({ tour }: Props) {
   const [count, setCount] = useState(1);
+  
+  const [date, setDate] = useState<Date | undefined>(undefined);
 
   return (
     <div className="w-2/5">
       <div className="w-full bg-primaryBg rounded-2xl p-8 flex flex-col gap-6">
         <h2 className="font-bold text-[2.625rem]">Book now</h2>
 
-        <div className="w-full flex flex-row justify-between items-center gap-4">
+        <div className="w-full flex flex-row justify-between items-center gap-4 h-full">
           <div className="w-1/2 flex flex-col gap-2">
             <div className="flex flex-row gap-2 items-center font-semibold text-2xl">
-              <Calendar />
-
+              <CalendarIcon />
+              
               <span>Select date</span>
             </div>
 
-            <DatePicker />
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left"
+                >
+                  {date ? format(date, "yyyy-MM-dd") : "Pick a date"}
+                </Button>
+              </PopoverTrigger>
+
+              <PopoverContent className="w-auto p-0">
+                <Calendar
+                  mode="single"
+                  selected={date}
+                  onSelect={setDate}
+                  disabled={(date) => date < new Date()}
+                  className="rounded-md border"
+                />
+              </PopoverContent>
+            </Popover>
           </div>
 
           <div className="w-1/2 flex flex-col gap-2">
@@ -72,9 +106,14 @@ export default function PaymentForm({ tour }: Props) {
             </div>
           </div>
 
-          <button className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1">
-            <span>Continue</span>
-          </button>
+          <Link
+            href={`/destinations/${tour.id}/checkout?date=${
+              date ? format(date, "yyyy-MM-dd") : ""
+            }&travelers=${count}`}
+            className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1"
+          >
+            Continue
+          </Link>
         </div>
       </div>
     </div>

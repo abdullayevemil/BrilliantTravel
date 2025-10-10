@@ -11,7 +11,7 @@ export default function Header() {
       <nav>
         <ul className="flex flex-row gap-4">
           <li className="px-2 py-1.5">
-            <Link href="/destinations" className="text-navigation text-base">
+            <Link href="/destinations/gobustan-absheron" className="text-navigation text-base">
               Destinations
             </Link>
           </li>
