@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
       public_key,
       amount,
       currency: "AZN",
-      language: "ru",
+      language: "en",
       order_id,
       description: `Payment for order ${order_id}`,
       success_redirect_url: success_url,
@@ -32,20 +32,34 @@ export async function POST(req: NextRequest) {
       .digest();
     const signature = Buffer.from(sha1Hash).toString("base64");
 
+    // ✅ Corrected request
+    const formBody = new URLSearchParams();
+    formBody.append("data", data);
+    formBody.append("signature", signature);
+
     const res = await fetch("https://epoint.az/api/1/request", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ data, signature }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formBody.toString(),
     });
 
-    const epointData = await res.json();
-
-    if (epointData.status === "success") {
-      return NextResponse.json({ redirect_url: epointData.redirect_url });
-    } else {
+    const text = await res.text(); // first read raw text
+    try {
+      const epointData = JSON.parse(text);
+      if (epointData.status === "success") {
+        return NextResponse.json({ redirect_url: epointData.redirect_url });
+      } else {
+        console.error("Epoint error:", epointData);
+        return NextResponse.json(
+          { error: "Failed to initiate payment" },
+          { status: 500 }
+        );
+      }
+    } catch {
+      console.error("Invalid JSON from Epoint:", text);
       return NextResponse.json(
-        { error: "Failed to initiate payment" },
-        { status: 500 }
+        { error: "Epoint returned invalid JSON" },
+        { status: 502 }
       );
     }
   } catch (err) {
