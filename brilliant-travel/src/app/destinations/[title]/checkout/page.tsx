@@ -77,6 +77,8 @@ export default function CheckoutPage() {
 
         if (res.ok) {
           alert("Your order was sent successfully ✅");
+
+          window.location.href = "/";
         } else {
           alert("An error occurred ❌");
         }
