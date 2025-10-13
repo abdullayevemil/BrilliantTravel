@@ -22,12 +22,12 @@ type CheckoutFormData = z.infer<typeof checkoutSchema>;
 export default function CheckoutPage() {
   const params = useParams();
 
-  const price = tours.filter((t) => t.id === params.title)[0].price;
-
   const searchParams = useSearchParams();
 
+  const price = tours.filter((t) => t.id === params.title)[0].price;
+  
   const defaultDate = searchParams.get("date") || "";
-
+  
   const defaultPeople = Number(searchParams.get("travelers") || 1);
 
   const {
@@ -44,16 +44,46 @@ export default function CheckoutPage() {
   });
 
   const onSubmit = async (data: CheckoutFormData) => {
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...data, price }),
-    });
+    if (data.payment === "card") {
+      // Epoint payment flow
+      try {
+        const res = await fetch("/api/epoint/create-payment", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            amount: price,
+            order_id: `ORDER-${Date.now()}`,
+          }),
+        });
+        const json = await res.json();
 
-    if (res.ok) {
-      alert("Your order was sent successfully ✅");
+        if (json.redirect_url) {
+          window.location.href = json.redirect_url; // redirect user to Epoint
+        } else {
+          alert("Failed to initiate card payment ❌");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Error creating payment ❌");
+      }
     } else {
-      alert("An error occurred ❌");
+      // Book now, pay later
+      try {
+        const res = await fetch("/api/checkout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...data, price }),
+        });
+
+        if (res.ok) {
+          alert("Your order was sent successfully ✅");
+        } else {
+          alert("An error occurred ❌");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Error submitting order ❌");
+      }
     }
   };
 
@@ -68,6 +98,7 @@ export default function CheckoutPage() {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-5"
           >
+            {/* Name / Surname */}
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <input
@@ -82,7 +113,6 @@ export default function CheckoutPage() {
                   </p>
                 )}
               </div>
-
               <div>
                 <input
                   type="text"
@@ -98,6 +128,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
+            {/* Email / Phone */}
             <div>
               <input
                 type="email"
@@ -111,7 +142,6 @@ export default function CheckoutPage() {
                 </p>
               )}
             </div>
-
             <div>
               <input
                 type="tel"
@@ -126,6 +156,7 @@ export default function CheckoutPage() {
               )}
             </div>
 
+            {/* Date / People */}
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <input
@@ -139,7 +170,6 @@ export default function CheckoutPage() {
                   </p>
                 )}
               </div>
-
               <div>
                 <input
                   type="number"
@@ -155,6 +185,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
+            {/* Payment Method */}
             <div className="flex flex-col gap-2">
               <label className="font-medium">Payment method:</label>
               <label className="flex items-center gap-2">
@@ -172,6 +203,7 @@ export default function CheckoutPage() {
               )}
             </div>
 
+            {/* Submit */}
             <button
               type="submit"
               disabled={isSubmitting}

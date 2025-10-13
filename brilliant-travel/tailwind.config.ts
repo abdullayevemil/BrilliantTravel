@@ -15,7 +15,7 @@ export default {
         footer: "var(--footer-foreground)",
         footerBg: "var(--footer-background)",
         secondaryFg: "var(--secondary-fg)",
-        background: "hsl(var(--background))",
+        background: "hsl(var(--background))", 
         foreground: "hsl(var(--foreground))",
         navigation: "var(--navigation-foreground)",
         border: "var(--border)",

@@ -11,11 +11,11 @@ export async function POST(req: Request) {
     const inputDate = new Date(date);
 
     const now = new Date();
-    
+
     if (isNaN(inputDate.getTime())) {
       throw new Error("Invalid date format");
     }
-    
+
     if (inputDate <= now) {
       throw new Error("Date must be in the future");
     }
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       to: email,
       subject: "Tour Booking Confirmation",
       html: `
-        <h2>Hello ${firstName} ${lastName},</h2>
+        <h2>Hello ${firstName} ${lastName},</h2> 
         <p>Thank you! Your tour booking has been confirmed.</p>
         <p><b>Tour date:</b> ${date}</p>
         <p><b>Number of travelers:</b> ${people}</p>

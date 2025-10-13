@@ -162,6 +162,7 @@ export default function Destinations() {
                     <DialogTrigger className="bg-button px-4 py-2 rounded-full">
                       Show all
                     </DialogTrigger>
+                    
                     <DialogContent className="w-4/5">
                       <DialogHeader>
                         <DialogTitle>Photo gallery</DialogTitle>

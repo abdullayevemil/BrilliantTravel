@@ -17,7 +17,7 @@ interface GalleryProps {
 export default function Gallery({ links }: GalleryProps) {
   const [selected, setSelected] = useState(0);
 
-  return (
+  return ( 
     <div className="w-full flex flex-col items-center gap-4 py-4 w-full">
       <div className="w-full max-w-5xl aspect-video rounded-xl overflow-hidden border border-gray-600 bg-black">
         <Image
