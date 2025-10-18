@@ -52,7 +52,7 @@ export default function CheckoutPage() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             amount: price,
-            order_id: `ORDER-${Date.now()}`,
+            order_id: `${Date.now()}`,
           }),
         });
         const json = await res.json();

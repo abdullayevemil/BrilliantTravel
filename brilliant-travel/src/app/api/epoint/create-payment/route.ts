@@ -19,10 +19,9 @@ export async function POST(req: NextRequest) {
     const error_url = process.env.NEXT_PUBLIC_EPOINT_ERROR_URL!;
     const result_url = process.env.NEXT_PUBLIC_EPOINT_RESULT_URL!;
 
-    // Step 1 — prepare JSON payload
     const json_string = JSON.stringify({
       public_key,
-      amount,
+      amount: amount.toString(),
       currency: "AZN",
       language: "en",
       order_id,
@@ -32,24 +31,31 @@ export async function POST(req: NextRequest) {
       result_url,
     });
 
-    // Step 2 — encode to base64
+    console.log("Epoint request JSON:", json_string);
+
     const data = Buffer.from(json_string).toString("base64");
 
-    // Step 3 — sign with SHA1(private_key + data + private_key)
-    const sha1Hash = crypto
+    const signature = crypto
       .createHash("sha1")
-      .update(private_key + data + private_key)
-      .digest();
-    const signature = Buffer.from(sha1Hash).toString("base64");
+      .update(private_key + data + private_key, "binary")
+      .digest('base64');
 
-    // Step 4 — send as form-urlencoded
-    const formBody = new URLSearchParams({ data, signature }).toString();
-
-    const res = await fetch("https://epoint.az/api/1/request", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: formBody,
+    const formBody = new URLSearchParams({
+      data,
+      signature,
     });
+
+    console.log("Epoint request data:", formBody.toString());
+
+    const res = await fetch("https://epoint.az/api/1/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: formBody.toString(),
+    });
+
+    console.log("Epoint response:", res);
 
     const text = await res.text();
     console.log("Epoint raw response:", text);
@@ -65,7 +71,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ redirect_url: epointData.redirect_url });
     }
 
-    return NextResponse.json(
+    return NextResponse.json( 
       { error: epointData.message || "Failed to initiate payment" },
       { status: 500 }
     );
