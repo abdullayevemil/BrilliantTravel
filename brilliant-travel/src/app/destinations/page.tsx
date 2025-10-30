@@ -112,23 +112,23 @@ export default function Destinations() {
     <div>
       <Header />
 
-      <main className="px-[6rem] pt-[4.5rem] w-full flex flex-col gap-[4.5rem]">
-        <section className="flex flex-col gap-12 w-full">
-          <h1 className="font-bold text-7xl max-w-[44rem]">
+      <main className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[6rem] pt-8 sm:pt-12 lg:pt-[4.5rem] w-full flex flex-col gap-8 sm:gap-12 lg:gap-[4.5rem]">
+        <section className="flex flex-col gap-8 sm:gap-12 w-full">
+          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-full lg:max-w-[44rem]">
             Gobustan & Absheron tour
           </h1>
 
-          <div className="flex flex-row gap-6 w-full h-[28.75rem]">
+          <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 w-full h-auto lg:h-[28.75rem]">
             <Image
               key={0}
               src={headerImages[0].link}
               alt="tour introductory image"
               width={718}
               height={460}
-              className="h-full w-[60%] object-cover rounded-2xl"
+              className="h-[20rem] sm:h-[25rem] lg:h-full w-full lg:w-[60%] object-cover rounded-2xl"
             />
 
-            <div className="grid grid-rows-2 grid-cols-2 gap-6 h-full w-[40%]">
+            <div className="grid grid-rows-2 grid-cols-2 gap-4 sm:gap-6 h-[20rem] sm:h-[25rem] lg:h-full w-full lg:w-[40%]">
               <Image
                 key={1}
                 src={headerImages[1].link}
@@ -159,11 +159,11 @@ export default function Destinations() {
 
                 <div className="absolute left-0 top-0 w-full h-full bg-footer rounded-2xl flex items-center justify-center">
                   <Dialog>
-                    <DialogTrigger className="bg-button px-4 py-2 rounded-full">
+                    <DialogTrigger className="bg-button px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base">
                       Show all
                     </DialogTrigger>
                     
-                    <DialogContent className="w-4/5">
+                    <DialogContent className="w-4/5 max-w-4xl">
                       <DialogHeader>
                         <DialogTitle>Photo gallery</DialogTitle>
 
@@ -177,12 +177,12 @@ export default function Destinations() {
           </div>
         </section>
 
-        <section className="w-full flex flex-row justify-between gap-[4.5rem]">
-          <div className="w-3/5 flex flex-col gap-12">
+        <section className="w-full flex flex-col lg:flex-row justify-between gap-8 lg:gap-[4.5rem]">
+          <div className="w-full lg:w-3/5 flex flex-col gap-8 sm:gap-12">
             <div className="w-full flex flex-col gap-4">
-              <h2 className="font-bold text-4xl">Tour overview</h2>
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl">Tour overview</h2>
 
-              <p className="text-xl">
+              <p className="text-base sm:text-lg lg:text-xl">
                 The best-seller tour allows you to discover Azerbaijan&apos;s
                 globally unique nature, one of the world&apos;s earliest human
                 settlements, and the rich cultural and historical heritage of
@@ -192,72 +192,75 @@ export default function Destinations() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-7">
-              <h3 className="font-semibold text-4xl">Included</h3>
+            <div className="flex flex-col gap-4 sm:gap-7">
+              <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl">Included</h3>
 
-              <div className="grid grid-rows-2 grid-cols-2 gap-6">
-                <div className="border border-order rounded-2xl w-full p-6 flex flex-col gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div className="border border-order rounded-2xl w-full p-4 sm:p-6 flex flex-col gap-3">
                   <Image
                     src={TourGuide}
                     alt="Tour guide icon"
                     width={72}
                     height={72}
+                    className="w-12 h-12 sm:w-[72px] sm:h-[72px]"
                   />
 
                   <div className="flex flex-col gap-2">
-                    <h4 className="text-[2rem] font-semibold">Tour Guide</h4>
+                    <h4 className="text-xl sm:text-2xl lg:text-[2rem] font-semibold">Tour Guide</h4>
 
-                    <h5 className="text-footer">
+                    <h5 className="text-footer text-sm sm:text-base">
                       Professional guidance in English, Russian
                     </h5>
                   </div>
                 </div>
 
-                <div className="border border-order rounded-2xl w-full p-6 flex flex-col gap-3">
-                  <Image src={Bus} alt="bus icon" width={72} height={72} />
+                <div className="border border-order rounded-2xl w-full p-4 sm:p-6 flex flex-col gap-3">
+                  <Image src={Bus} alt="bus icon" width={72} height={72} className="w-12 h-12 sm:w-[72px] sm:h-[72px]" />
 
                   <div className="flex flex-col gap-2">
-                    <h4 className="text-[2rem] font-semibold">
+                    <h4 className="text-xl sm:text-2xl lg:text-[2rem] font-semibold">
                       Transportation
                     </h4>
 
-                    <h5 className="text-footer">
+                    <h5 className="text-footer text-sm sm:text-base">
                       Pickup from hotel & Drop-off to hotel
                     </h5>
                   </div>
                 </div>
 
-                <div className="border border-order rounded-2xl w-full p-6 flex flex-col gap-3">
+                <div className="border border-order rounded-2xl w-full p-4 sm:p-6 flex flex-col gap-3">
                   <Image
                     src={Wallet}
                     alt="Wallet icon"
                     width={72}
                     height={72}
+                    className="w-12 h-12 sm:w-[72px] sm:h-[72px]"
                   />
 
                   <div className="flex flex-col gap-2">
-                    <h4 className="text-[2rem] font-semibold">Entrance fees</h4>
+                    <h4 className="text-xl sm:text-2xl lg:text-[2rem] font-semibold">Entrance fees</h4>
 
-                    <h5 className="text-footer">
+                    <h5 className="text-footer text-sm sm:text-base">
                       Ensuring a hassle-free experience
                     </h5>
                   </div>
                 </div>
 
-                <div className="border border-order rounded-2xl w-full p-6 flex flex-col gap-3">
+                <div className="border border-order rounded-2xl w-full p-4 sm:p-6 flex flex-col gap-3">
                   <Image
                     src={Water}
                     alt="water bottle icon"
                     width={72}
                     height={72}
+                    className="w-12 h-12 sm:w-[72px] sm:h-[72px]"
                   />
 
                   <div className="flex flex-col gap-2">
-                    <h4 className="text-[2rem] font-semibold">
+                    <h4 className="text-xl sm:text-2xl lg:text-[2rem] font-semibold">
                       Drinking water
                     </h4>
 
-                    <h5 className="text-footer">
+                    <h5 className="text-footer text-sm sm:text-base">
                       Complimentary refreshing water
                     </h5>
                   </div>
@@ -266,14 +269,14 @@ export default function Destinations() {
             </div>
           </div>
 
-          <div className="w-2/5">
-            <div className="w-full bg-primaryBg rounded-2xl p-8 flex flex-col gap-6">
-              <h2 className="font-bold text-[2.625rem]">Book now</h2>
+          <div className="w-full lg:w-2/5">
+            <div className="w-full bg-primaryBg rounded-2xl p-4 sm:p-6 lg:p-8 flex flex-col gap-4 sm:gap-6">
+              <h2 className="font-bold text-2xl sm:text-3xl lg:text-[2.625rem]">Book now</h2>
 
-              <div className="w-full flex flex-row justify-between items-center gap-4">
-                <div className="w-1/2 flex flex-col gap-2">
-                  <div className="flex flex-row gap-2 items-center font-semibold text-2xl">
-                    <Calendar />
+              <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div className="w-full sm:w-1/2 flex flex-col gap-2">
+                  <div className="flex flex-row gap-2 items-center font-semibold text-lg sm:text-xl lg:text-2xl">
+                    <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
 
                     <span>Select date</span>
                   </div>
@@ -281,19 +284,19 @@ export default function Destinations() {
                   <DatePicker />
                 </div>
 
-                <div className="w-1/2 flex flex-col gap-2">
-                  <div className="flex flex-row gap-2 font-semibold text-2xl">
-                    <Users />
+                <div className="w-full sm:w-1/2 flex flex-col gap-2">
+                  <div className="flex flex-row gap-2 font-semibold text-lg sm:text-xl lg:text-2xl">
+                    <Users className="w-5 h-5 sm:w-6 sm:h-6" />
 
                     <span>Travelers count</span>
                   </div>
 
-                  <div className="rounded-lg border border-order flex flex-row justify-between p-4 font-semibold text-xl">
+                  <div className="rounded-lg border border-order flex flex-row justify-between p-3 sm:p-4 font-semibold text-lg sm:text-xl">
                     <button
                       onClick={() => setCount((a) => (a > 1 ? a - 1 : a))}
                       className="hover:cursor-pointer"
                     >
-                      <MinusCircle width={24} height={24} />
+                      <MinusCircle width={20} height={20} className="sm:w-6 sm:h-6" />
                     </button>
 
                     <span>{count}</span>
@@ -301,7 +304,7 @@ export default function Destinations() {
                       onClick={() => setCount((a) => a + 1)}
                       className="hover:cursor-pointer"
                     >
-                      <PlusCircle width={24} height={24} />
+                      <PlusCircle width={20} height={20} className="sm:w-6 sm:h-6" />
                     </button>
                   </div>
                 </div>
@@ -309,9 +312,9 @@ export default function Destinations() {
 
               <div className="w-full border-t border-dashed border-order"></div>
 
-              <div className="w-full flex flex-row justify-between items-center">
+              <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
                 <div className="flex flex-row gap-2 py-2 h-full items-center">
-                  <div className="font-bold text-2xl flex items-center">
+                  <div className="font-bold text-xl sm:text-2xl flex items-center">
                     <div>{tours[0].price} $</div>
                   </div>
 
@@ -319,12 +322,12 @@ export default function Destinations() {
                     <div className="border-l-[1px] border-secondaryFg h-full"></div>
                   </div>
 
-                  <div className="text-secondaryFg font-medium text-base flex items-center">
+                  <div className="text-secondaryFg font-medium text-sm sm:text-base flex items-center">
                     <div>per person</div>
                   </div>
                 </div>
 
-                <button className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1">
+                <button className="flex flex-row py-2 sm:py-3 px-4 sm:px-6 rounded-full bg-black text-white items-center gap-1 text-sm sm:text-base">
                   <span>Continue</span>
                 </button>
               </div>
@@ -332,28 +335,28 @@ export default function Destinations() {
           </div>
         </section>
 
-        <section className="flex flex-col gap-7 mb-16">
-          <h3 className="font-semibold text-4xl">Tour program</h3>
+        <section className="flex flex-col gap-4 sm:gap-7 mb-8 sm:mb-16">
+          <h3 className="font-semibold text-2xl sm:text-3xl lg:text-4xl">Tour program</h3>
 
-          <div className="flex flex-row justify-between items-end">
-            <div className="flex flex-col gap-5 relative">
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-8 lg:gap-0">
+            <div className="flex flex-col gap-4 sm:gap-5 relative w-full lg:w-auto">
               <div className="flex flex-row items-center gap-3">
-                <div className="border rounded-full p-[0.625rem] w-12 h-12 flex items-center justify-center bg-white">
-                  <MapPin />
+                <div className="border rounded-full p-2 sm:p-[0.625rem] w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
 
-                <div className="absolute left-6 top-0 w-[2px] -z-10 h-full border border-dashed"></div>
+                <div className="absolute left-5 sm:left-6 top-0 w-[2px] -z-10 h-full border border-dashed"></div>
 
-                <div className="flex flex-row gap-2 py-2 h-full items-center">
-                  <div className="font-bold text-2xl flex items-center">
+                <div className="flex flex-col sm:flex-row gap-1 sm:gap-2 py-2 h-full items-start sm:items-center">
+                  <div className="font-bold text-lg sm:text-xl lg:text-2xl flex items-center">
                     <div>{stops[0].name}</div>
                   </div>
 
-                  <div className="h-6 flex items-center">
+                  <div className="h-4 sm:h-6 flex items-center">
                     <div className="border-l-[1px] border-secondaryFg h-full"></div>
                   </div>
 
-                  <div className="text-secondaryFg font-medium text-base flex items-center">
+                  <div className="text-secondaryFg font-medium text-sm sm:text-base flex items-center">
                     <div>{stops[0].time}</div>
                   </div>
                 </div>

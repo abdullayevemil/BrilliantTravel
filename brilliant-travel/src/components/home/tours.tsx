@@ -31,20 +31,20 @@ export default function Tours() {
         ]}
         className="w-full flex flex-col gap-7"
       >
-        <div className="w-full flex flex-row justify-between items-center px-24">
-          <h2 className="font-semibold text-[2.625rem]">Tours we offer</h2>
+        <div className="w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 gap-4 sm:gap-0">
+          <h2 className="font-semibold text-2xl sm:text-3xl lg:text-[2.625rem]">Tours we offer</h2>
 
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-row gap-3 sm:gap-5">
             <CarouselPrevious />
 
             <CarouselNext />
           </div>
         </div>
 
-        <div className="pl-[5.875rem]">
+        <div className="pl-2 sm:pl-4 md:pl-8 lg:pl-[5.875rem]">
           <CarouselContent className="py-2">
             {tours.map((tour, index) => (
-              <CarouselItem key={index} className="lg:basis-1/3">
+              <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3">
                 <div className="p-2">
                   <Card className="w-full">
                     <CardContent className="flex flex-col aspect-square items-center justify-center p-0 w-full justify-between">
@@ -58,21 +58,22 @@ export default function Tours() {
                         />
                       </div>
 
-                      <div className="p-4 pt-2 flex flex-col justify-between w-full gap-[3rem]">
-                        <div className="w-full flex flex-col gap-3">
-                          <h3 className="font-bold text-[1.75rem]">
+                      <div className="p-3 sm:p-4 pt-2 flex flex-col justify-between w-full gap-4 sm:gap-[3rem]">
+                        <div className="w-full flex flex-col gap-2 sm:gap-3">
+                          <h3 className="font-bold text-lg sm:text-xl lg:text-[1.75rem]">
                             {tour.title}
                           </h3>
 
-                          <div className="flex flex-row gap-3">
+                          <div className="flex flex-row gap-2 sm:gap-3">
                             <div className="flex flex-row gap-0.5 h-full items-center py-0.5">
                               <ClockIcon
-                                width={18}
-                                height={18}
+                                width={16}
+                                height={16}
                                 color="#8F8F8F"
+                                className="sm:w-[18px] sm:h-[18px]"
                               />
 
-                              <span className="text-secondaryFg font-medium text-base">
+                              <span className="text-secondaryFg font-medium text-sm sm:text-base">
                                 {tour.time}
                               </span>
                             </div>
@@ -83,21 +84,22 @@ export default function Tours() {
 
                             <div className="flex flex-row gap-0.5 h-full items-center py-0.5">
                               <MapPinIcon
-                                width={18}
-                                height={18}
+                                width={16}
+                                height={16}
                                 color="#8F8F8F"
+                                className="sm:w-[18px] sm:h-[18px]"
                               />
 
-                              <span className="text-secondaryFg font-medium text-base">
+                              <span className="text-secondaryFg font-medium text-sm sm:text-base">
                                 {tour.stops} stops
                               </span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="w-full flex flex-row justify-between items-center">
+                        <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
                           <div className="flex flex-row gap-2 py-2 h-full">
-                            <div className="font-bold text-2xl flex items-center">
+                            <div className="font-bold text-xl sm:text-2xl flex items-center">
                               <div>{tour.price} $</div>
                             </div>
 
@@ -105,18 +107,18 @@ export default function Tours() {
                               <div className="h-full border-l-[1px] border-secondaryFg"></div>
                             </div>
 
-                            <div className="flex flex-row text-secondaryFg font-medium text-base h-full items-center align-center text-center">
+                            <div className="flex flex-row text-secondaryFg font-medium text-sm sm:text-base h-full items-center align-center text-center">
                               <div>per person</div>
                             </div>
                           </div>
 
                           <Link
                             href={`/destinations/${tour.id}`}
-                            className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1"
+                            className="flex flex-row py-2 sm:py-3 px-4 sm:px-6 rounded-full bg-black text-white items-center gap-1 text-sm sm:text-base"
                           >
                             <span>Details</span>
 
-                            <ArrowRight width={18} height={18} />
+                            <ArrowRight width={16} height={16} className="sm:w-[18px] sm:h-[18px]" />
                           </Link>
                         </div>
                       </div>

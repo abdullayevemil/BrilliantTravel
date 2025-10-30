@@ -9,16 +9,16 @@ import WhoWeAre from "@/components/home/who-we-are";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-[4.5rem] w-full">
+    <main className="flex flex-col gap-8 sm:gap-12 lg:gap-[4.5rem] w-full">
       <section className="w-full">
         <Hero />
       </section>
 
-      <section className="px-24 w-full flex flex-col gap-7 mb-16">
+      <section className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 w-full flex flex-col gap-7 mb-8 sm:mb-16">
         <Benefits />
       </section>
 
-      <section className="px-24 w-full flex flex-col gap-7">
+      <section className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 w-full flex flex-col gap-7">
         <WhoWeAre />
       </section>
 
@@ -30,15 +30,15 @@ export default function Home() {
         <Moments />
       </section>
 
-      <section className="w-full flex flex-col gap-7 mb-16">
+      <section className="w-full flex flex-col gap-7 mb-8 sm:mb-16">
         <Reviews />
       </section>
 
-      <section className="w-full flex flex-col gap-7 px-24">
+      <section className="w-full flex flex-col gap-7 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
         <Assistance />
       </section>
 
-      <section className="px-24 w-full flex flex-col gap-7">
+      <section className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 w-full flex flex-col gap-7">
         <FAQ />
       </section>
     </main>

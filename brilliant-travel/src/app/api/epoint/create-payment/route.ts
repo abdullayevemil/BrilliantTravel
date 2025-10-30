@@ -14,9 +14,13 @@ export async function POST(req: NextRequest) {
     const { amount, order_id } = body as { amount: number; order_id: string };
 
     const public_key = process.env.NEXT_PUBLIC_EPOINT_PUBLIC_KEY!;
+    
     const private_key = process.env.EPOINT_PRIVATE_KEY!;
+    
     const success_url = process.env.NEXT_PUBLIC_EPOINT_SUCCESS_URL!;
+    
     const error_url = process.env.NEXT_PUBLIC_EPOINT_ERROR_URL!;
+    
     const result_url = process.env.NEXT_PUBLIC_EPOINT_RESULT_URL!;
 
     const json_string = JSON.stringify({
@@ -45,9 +49,7 @@ export async function POST(req: NextRequest) {
       signature,
     });
 
-    console.log("Epoint request data:", formBody.toString());
-
-    const res = await fetch("https://epoint.az/api/1/checkout", {
+    const res = await fetch("https://epoint.az/api/1/request", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -55,10 +57,7 @@ export async function POST(req: NextRequest) {
       body: formBody.toString(),
     });
 
-    console.log("Epoint response:", res);
-
     const text = await res.text();
-    console.log("Epoint raw response:", text);
 
     let epointData: EpointResponse;
     try {

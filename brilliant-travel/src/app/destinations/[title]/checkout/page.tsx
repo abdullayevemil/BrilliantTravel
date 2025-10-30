@@ -92,22 +92,21 @@ export default function CheckoutPage() {
   return (
     <div>
       <Header />
-      <div className="min-h-screen flex items-center justify-center py-12">
-        <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-2xl">
-          <h1 className="text-3xl font-bold mb-6">Checkout</h1>
+      <div className="min-h-screen flex items-center justify-center py-8 sm:py-12 px-4 sm:px-8">
+        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 w-full max-w-2xl">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Checkout</h1>
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-4 sm:gap-5"
           >
-            {/* Name / Surname */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <input
                   type="text"
                   placeholder="Name"
                   {...register("firstName")}
-                  className="border rounded-lg px-4 py-2 w-full"
+                  className="border rounded-lg px-3 sm:px-4 py-2 w-full text-sm sm:text-base"
                 />
                 {errors.firstName && (
                   <p className="text-red-500 text-sm mt-1">
@@ -120,7 +119,7 @@ export default function CheckoutPage() {
                   type="text"
                   placeholder="Surname"
                   {...register("lastName")}
-                  className="border rounded-lg px-4 py-2 w-full"
+                  className="border rounded-lg px-3 sm:px-4 py-2 w-full text-sm sm:text-base"
                 />
                 {errors.lastName && (
                   <p className="text-red-500 text-sm mt-1">
@@ -136,7 +135,7 @@ export default function CheckoutPage() {
                 type="email"
                 placeholder="Email"
                 {...register("email")}
-                className="border rounded-lg px-4 py-2 w-full"
+                className="border rounded-lg px-3 sm:px-4 py-2 w-full text-sm sm:text-base"
               />
               {errors.email && (
                 <p className="text-red-500 text-sm mt-1">
@@ -149,7 +148,7 @@ export default function CheckoutPage() {
                 type="tel"
                 placeholder="Phone number"
                 {...register("phone")}
-                className="border rounded-lg px-4 py-2 w-full"
+                className="border rounded-lg px-3 sm:px-4 py-2 w-full text-sm sm:text-base"
               />
               {errors.phone && (
                 <p className="text-red-500 text-sm mt-1">
@@ -159,12 +158,12 @@ export default function CheckoutPage() {
             </div>
 
             {/* Date / People */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <input
                   type="date"
                   {...register("date")}
-                  className="border rounded-lg px-4 py-2 w-full"
+                  className="border rounded-lg px-3 sm:px-4 py-2 w-full text-sm sm:text-base"
                 />
                 {errors.date && (
                   <p className="text-red-500 text-sm mt-1">
@@ -177,7 +176,7 @@ export default function CheckoutPage() {
                   type="number"
                   min={1}
                   {...register("people")}
-                  className="border rounded-lg px-4 py-2 w-full"
+                  className="border rounded-lg px-3 sm:px-4 py-2 w-full text-sm sm:text-base"
                 />
                 {errors.people && (
                   <p className="text-red-500 text-sm mt-1">
@@ -189,12 +188,12 @@ export default function CheckoutPage() {
 
             {/* Payment Method */}
             <div className="flex flex-col gap-2">
-              <label className="font-medium">Payment method:</label>
-              <label className="flex items-center gap-2">
+              <label className="font-medium text-sm sm:text-base">Payment method:</label>
+              <label className="flex items-center gap-2 text-sm sm:text-base">
                 <input type="radio" value="later" {...register("payment")} />
                 Book now, pay later
               </label>
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 text-sm sm:text-base">
                 <input type="radio" value="card" {...register("payment")} />
                 Pay by card
               </label>
@@ -209,7 +208,7 @@ export default function CheckoutPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-primaryBg font-semibold rounded-lg px-6 py-3 disabled:opacity-60"
+              className="bg-primaryBg font-semibold rounded-lg px-4 sm:px-6 py-2 sm:py-3 disabled:opacity-60 text-sm sm:text-base"
             >
               {isSubmitting ? "Processing..." : "Order Now"}
             </button>

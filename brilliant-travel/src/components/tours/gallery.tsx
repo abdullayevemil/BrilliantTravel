@@ -18,7 +18,7 @@ export default function Gallery({ links }: GalleryProps) {
   const [selected, setSelected] = useState(0);
 
   return ( 
-    <div className="w-full flex flex-col items-center gap-4 py-4 w-full">
+    <div className="w-full flex flex-col items-center gap-3 sm:gap-4 py-4 w-full">
       <div className="w-full max-w-5xl aspect-video rounded-xl overflow-hidden border border-gray-600 bg-black">
         <Image
           src={links[selected]}
@@ -33,10 +33,10 @@ export default function Gallery({ links }: GalleryProps) {
       <Carousel className="w-full max-w-5xl">
         <CarouselContent className="w-full">
           {links.map((link, index) => (
-            <CarouselItem key={index} className="basis-1/9">
+            <CarouselItem key={index} className="basis-1/6 sm:basis-1/8 lg:basis-1/9">
               <button
                 onClick={() => setSelected(index)}
-                className={`relative flex-shrink-0 w-24 h-20 rounded-md overflow-hidden border-2 transition-all ${
+                className={`relative flex-shrink-0 w-16 h-12 sm:w-20 sm:h-16 lg:w-24 lg:h-20 rounded-md overflow-hidden border-2 transition-all ${
                   selected === index
                     ? "border-white"
                     : "border-transparent hover:border-gray-400"

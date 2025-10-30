@@ -18,10 +18,10 @@ const images = [
 
 export default function Moments() {
   return (
-    <div className="flex flex-col gap-7 px-24">
-      <h2 className="font-semibold text-[2.625rem]">Moments from our tours</h2>
+    <div className="flex flex-col gap-7 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+      <h2 className="font-semibold text-2xl sm:text-3xl lg:text-[2.625rem]">Moments from our tours</h2>
 
-      <div className="grid grid-cols-3 gap-6 relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 relative">
         {images.map((image, index) =>
           (index % 4) % 3 == 0 ? (
             <Image
@@ -30,7 +30,7 @@ export default function Moments() {
               alt="image from tour"
               width={500}
               height={500}
-              className="w-full col-span-2"
+              className="w-full sm:col-span-2 lg:col-span-2"
             />
           ) : (
             <Image
@@ -44,10 +44,10 @@ export default function Moments() {
           )
         )}
 
-        <div className="absolute left-0 bottom-0 w-full h-[8.3125rem] bg-gradient z-50 flex justify-center items-center">
+        <div className="absolute left-0 bottom-0 w-full h-[6rem] sm:h-[8.3125rem] bg-gradient z-50 flex justify-center items-center">
           <Link
             href="/destinations"
-            className="flex flex-row py-3 px-6 rounded-full bg-black text-white items-center gap-1"
+            className="flex flex-row py-2 sm:py-3 px-4 sm:px-6 rounded-full bg-black text-white items-center gap-1 text-sm sm:text-base"
           >
             <span>Show more</span>
           </Link>
