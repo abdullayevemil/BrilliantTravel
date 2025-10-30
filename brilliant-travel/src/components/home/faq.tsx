@@ -46,7 +46,7 @@ export default function FAQ() {
                 </li>{" "}
                 <li>
                   Gabala-Shamakhi-Tufandag -Nohur lake - Waterfall tour 🌄
-                  Azerbaijan's Best Nature Tour 🌿 Experience the breathtaking
+                  Azerbaijan&apos;s Best Nature Tour 🌿 Experience the breathtaking
                   landscapes and stunning natural wonders!
                 </li>
               </ol>

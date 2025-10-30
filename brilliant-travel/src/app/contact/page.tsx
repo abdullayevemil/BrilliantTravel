@@ -18,9 +18,9 @@ export default function Contact() {
 
             <p className="text-base sm:text-lg lg:text-xl w-full lg:w-3/5">
               Have questions or need assistance planning your next trip? Our
-              team at Brilliant Travel is here to help! Whether you're looking
+              team at Brilliant Travel is here to help! Whether you&apos;re looking
               for customized travel packages, visa assistance, or simply travel
-              advice, we're just a message away.
+              advice, we&apos;re just a message away.
             </p>
           </div>
         </section>
@@ -89,7 +89,7 @@ export default function Contact() {
 
             <div className="gap-2 sm:gap-[0.625rem] p-4 sm:p-6 lg:p-8 w-full h-2/5 absolute bottom-0 left-0 bg-tourGradient rounded-2xl text-white flex flex-col justify-end">
               <div className="font-semibold text-lg sm:text-xl lg:text-2xl italic">
-                People don't take trips, trips take people.
+                People don&apos;t take trips, trips take people.
               </div>
 
               <span className="font-normal text-sm sm:text-base">by John Steinbeck</span>

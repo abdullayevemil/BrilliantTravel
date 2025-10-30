@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="text-hero text-base sm:text-lg">
               <div>
                 Explore Azerbaijan history, stunning landscapes, and vibrant
-                culture. From Baku's
+                culture. From Baku&apos;s
               </div>
 
               <div>

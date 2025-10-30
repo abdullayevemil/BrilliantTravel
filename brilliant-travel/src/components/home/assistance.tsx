@@ -14,7 +14,7 @@ export default function Assistance() {
           <p className="w-full lg:w-1/2 text-sm sm:text-base lg:text-lg">
             Not sure which destination suits you best? Let our travel experts
             guide you! Whether you&apos;re looking for an adventurous getaway or a
-            cultural exploration, we'll help you find the perfect experience.
+            cultural exploration, we&apos;ll help you find the perfect experience.
           </p>
 
           <Link href="/contact" className="w-fit px-4 sm:px-6 py-2 sm:py-3 bg-black text-white rounded-full border border-border text-sm sm:text-base">

@@ -28,7 +28,7 @@ export default function Reviews() {
         className="w-full flex flex-col gap-7"
       >
         <div className="w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 gap-4 sm:gap-0">
-          <h2 className="font-semibold text-2xl sm:text-3xl lg:text-[2.625rem]">Clients' opinions</h2>
+          <h2 className="font-semibold text-2xl sm:text-3xl lg:text-[2.625rem]">Clients&apos; opinions</h2>
 
           <div className="flex flex-row gap-3 sm:gap-5">
             <CarouselPrevious />

@@ -13,7 +13,7 @@ export default function WhoWeAre() {
             <span className="font-bold">Brilliant Travel -</span> With our
             expertly crafted travel packages, personalized itineraries, and
             seamless booking experience, we make exploring the world effortless.
-            Our dedicated team ensures every journey is unforgettable. Let's
+            Our dedicated team ensures every journey is unforgettable. Let&apos;s
             make your next trip brilliant!
           </p>
 

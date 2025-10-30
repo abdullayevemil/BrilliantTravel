@@ -26,7 +26,7 @@ export default function About() {
               At Brilliant Travel, we believe that every journey should be an
               unforgettable experience. With years of expertise in the travel
               industry, we specialize in crafting personalized travel packages
-              that suit every traveler's needs. Our team is dedicated to
+              that suit every traveler&apos;s needs. Our team is dedicated to
               providing seamless booking experiences, expert travel advice, and
               exceptional customer service. From flights and accommodations to
               guided tours and visa assistance, we take care of every detail so
@@ -85,7 +85,7 @@ export default function About() {
 
               <p className="text-base sm:text-lg text-hero">
                 Discover hidden gems and cultural treasures with knowledgeable
-                guides who bring Azerbaijan's history and traditions to life.
+                guides who bring Azerbaijan&apos;s history and traditions to life.
               </p>
             </div>
 
